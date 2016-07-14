@@ -12,14 +12,15 @@ Project will utilize the following:
 
 **Backend**
 - NodeJS 
-    - ExpressJS for server, routing API calls
-    - Discord.JS for Bot functions
-    - MongoDB for Database Queries and Connections
+    - [ExpressJS](github.com/expressjs/express) for server, routing API calls
+    - [Discord.JS](github.com/hydrabolt/discord.js) for Bot functions
+    - [MongoDB](github.com/mongodb/node-mongodb-native) for Database Queries and Connections
 
 **Frontend**
-- AngularJS
-    - Angular-Route for routing and serving of HTML pages
-    - Angular-Resource for retrieveing JSON responses from Express Server
-    - Angular-Material for layouts and cosmedics of web interface. 
+- Angular
+    - [Angularjs](github.com/angular/angular.js) for angulary type things
+    - [Angular-Route](github.com/angular/angular.js) for routing and serving of HTML pages
+    - [Angular-Resource](github.com/angular/angular.js) for retrieveing JSON responses from Express Server
+    - [Angular-Material](github.com/angular/material) for layouts and cosmedics of web interface. 
 
 ######These are all very general ideas - call it a scratch-pad if you will. Updates will happen to this README as the project progresses.

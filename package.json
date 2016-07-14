@@ -1,0 +1,32 @@
+{
+  "name": "ffcbot",
+  "version": "0.0.1",
+  "description": "Discord Management Bot Project for Focused Fire Chat",
+  "main": "server.js",
+  "scripts": {
+    "test": "N/A"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unisys12/ffcbot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "destiny"
+  ],
+  "author": "Phillip Jackson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unisys12/ffcbot/issues"
+  },
+  "homepage": "https://github.com/unisys12/ffcbot#readme",
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-resource": "^1.5.7",
+    "angular-route": "^1.5.7",
+    "discord.js": "^8.0.0",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.1"
+  }
+}

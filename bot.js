@@ -1,7 +1,7 @@
 // Import dependencies and Utilities
 const dischord = require('discord.js');
-var config = require('./ffcbot/config.js');
-var utilities = require('./ffcbot/utils.js');
+var config = require('./bot_core/config.js');
+var utilities = require('./bot_core/utils.js');
 
 // Instantiate classes
 var bot = new dischord.Client();

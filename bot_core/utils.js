@@ -1,11 +1,16 @@
+// Require dependencies
 const mongo = require('mongodb').MongoClient;
 const assert = require('assert');
+
+// Instantiate dependencies
 var ObjectID = require('mongodb').ObjectID;
 var url = 'mongodb://localhost:27017/chat_log';
 
 module.exports = {
 
-    logMesseage: function(data) {
+    logMessage: function(data) {
+
+        console.log('Fired Save Event!');
 
         var logMessage = function(db, callback) {
             if (data instanceof Object) {

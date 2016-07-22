@@ -1,0 +1,27 @@
+{
+  "name": "ffcbot.app",
+  "version": "1.0.0",
+  "description": "Discord Bot Test",
+  "main": "server.js",
+  "scripts": {
+    "test": "N/A"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n/A.git"
+  },
+  "keywords": [
+    "N/A"
+  ],
+  "author": "Phillip Jackson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/n/A/issues"
+  },
+  "homepage": "https://github.com/n/A#readme",
+  "dependencies": {
+    "discord.js": "^8.0.0",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.5"
+  }
+}

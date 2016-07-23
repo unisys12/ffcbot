@@ -46,12 +46,14 @@ passport.use(new LocalStrategy(
         if (!user.verifyPassword(password)) { return done(null, false); }
         return done(null, user);
       })
-  }));
+  })
+);
 
 /**
   * App Routes
   *
   ****************************************/
+
 app.get('/logs', function(req, res) {        
     db.find(function(err, msgs) {
         if(err){

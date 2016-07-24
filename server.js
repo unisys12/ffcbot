@@ -7,7 +7,7 @@ var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
 var config = require('./config.js');
-var passport = require('passport');
+var passport = require('passport').Strategy('passport-local');
 var exports = module.exports = {};
 
 //console.log(exports);
@@ -37,7 +37,7 @@ var port = 8080;
 // Set where static assets will be pulled from
 app.use(express.static('public/'));
 
-passport.use(new LocalStrategy(
+/*passport.use(new LocalStrategy(
   function (username, password, done) {
     User.findOne({ username: username }, 
       function (err, user) {
@@ -48,7 +48,7 @@ passport.use(new LocalStrategy(
       })
   })
 );
-
+*/
 /**
   * App Routes
   *

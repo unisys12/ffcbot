@@ -1,37 +1,23 @@
 {
-<<<<<<< HEAD
   "name": "ffcbot",
   "version": "0.0.1",
   "description": "Discord Management Bot Project for Focused Fire Chat",
-=======
-  "name": "ffcbot.app",
-  "version": "1.0.0",
-  "description": "Discord Bot Test",
->>>>>>> auth
   "main": "server.js",
   "scripts": {
     "test": "N/A"
   },
   "repository": {
     "type": "git",
-<<<<<<< HEAD
     "url": "git+https://github.com/unisys12/ffcbot.git"
   },
   "keywords": [
     "discord",
     "bot",
     "destiny"
-=======
-    "url": "git+https://github.com/n/A.git"
-  },
-  "keywords": [
-    "N/A"
->>>>>>> auth
   ],
   "author": "Phillip Jackson",
   "license": "MIT",
   "bugs": {
-<<<<<<< HEAD
     "url": "https://github.com/unisys12/ffcbot/issues"
   },
   "homepage": "https://github.com/unisys12/ffcbot#readme",
@@ -42,16 +28,5 @@
     "discord.js": "^8.0.0",
     "express": "^4.14.0",
     "mongodb": "^2.2.1"
-=======
-    "url": "https://github.com/n/A/issues"
-  },
-  "homepage": "https://github.com/n/A#readme",
-  "dependencies": {
-    "discord.js": "^8.0.0",
-    "express": "^4.14.0",
-    "mongoose": "^4.5.5",
-    "passport": "^0.3.2",
-    "passport-local": "^1.0.0"
->>>>>>> auth
   }
 }

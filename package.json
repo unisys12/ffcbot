@@ -22,7 +22,10 @@
   },
   "homepage": "https://github.com/unisys12/ffcbot#readme",
   "dependencies": {
-    "angular": "^1.5.7",
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-material": "^1.1.0-rc.5",
     "angular-resource": "^1.5.7",
     "angular-route": "^1.5.7",
     "discord.js": "^8.0.0",

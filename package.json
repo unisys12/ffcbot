@@ -33,6 +33,7 @@
     "mongodb": "^2.2.1"
   },
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-copy": "0.0.2"
   }
 }

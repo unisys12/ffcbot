@@ -6,7 +6,7 @@ angular.module('ffcBot', [
 
     .controller('IndexController', function(){
         var ic = this;
-        ic.title = 'FFCBOT DASHBOARD';
+        ic.title = 'DASHBOARD';
     });
 
 function config($routeProvider, $locationProvider) {

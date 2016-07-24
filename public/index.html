@@ -2,42 +2,26 @@
 <html lang="en">
     <head>
         <title>Test App</title>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js"></script>
-        <script src="controllers/indexController.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.min.js"></script>
+        <script src="./app/app.js"></script> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.min.css">        
+        <base href="/">
     </head>
     <body ng-app="ffcBot">
-        <div class="container" ng-controller="IndexController">
-            <header>
-                <h1>{{ title }}</h1>
-            </header>
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Server Name</th>
-                            <th>Room Name</th>
-                            <th>Username</th>
-                            <th>Message</th>
-                            <th>Timestamp</th>
-                        </tr>
-                    </thead>
-                    <tbody ng-repeat="log in logs">
-                        <tr>
-                            <td>{{ log.server }}</td>
-                            <td>{{ log.channel }}</td>
-                            <td>{{ log.author }}</td>
-                            <td>{{ log.message }}</td>
-                            <td>{{ log.timestamp | date:'MM-dd-yyyy hh:mm:ss'}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>        
+        <div class="container" ng-controller="IndexController as ic" ng-cloak>
+            <md-grid-list
+                    md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6"
+                    md-row-height-gt-md="1:1" md-row-height="2:2"
+                    md-gutter="12px" md-gutter-gt-sm="8px" >
+                <md-grid-tile class="gray"
+                    md-rowspan="3" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1">
+                  <md-grid-tile-footer>
+                    <h3>{{ ic.title }}</h3>
+                  </md-grid-tile-footer>
+                </md-grid-tile>
+            </md-grid-list>
+        </div>      
     </body>
 </html>

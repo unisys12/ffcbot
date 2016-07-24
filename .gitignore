@@ -36,5 +36,10 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+<<<<<<< HEAD
 # Bot Files to Ignore
 bot_core/config.js
+=======
+#local config file
+config.js
+>>>>>>> auth

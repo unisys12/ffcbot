@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Test App</title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.min.js"></script>
+        <script src="./app/app.js"></script> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.min.css">        
+        <base href="/">
+    </head>
+    <body ng-app="ffcBot">
+        <div class="container" ng-controller="IndexController as ic" ng-cloak>
+            <md-grid-list
+                    md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6"
+                    md-row-height-gt-md="1:1" md-row-height="2:2"
+                    md-gutter="12px" md-gutter-gt-sm="8px" >
+                <md-grid-tile class="gray"
+                    md-rowspan="3" md-colspan="2" md-colspan-sm="1" md-colspan-xs="1">
+                  <md-grid-tile-footer>
+                    <h3>{{ ic.title }}</h3>
+                  </md-grid-tile-footer>
+                </md-grid-tile>
+            </md-grid-list>
+        </div>      
+    </body>
+</html>

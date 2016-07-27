@@ -32,7 +32,8 @@
     "body-parser": "^1.15.2",
     "discord.js": "^8.0.0",
     "express": "^4.14.0",
-    "mongodb": "^2.2.1"
+    "mongodb": "^2.2.1",
+    "mongoose": "^4.5.7"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

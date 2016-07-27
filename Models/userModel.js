@@ -7,6 +7,7 @@ var UserSchema = new Schema({
     email: String,
     username: String,
     password: String,
+    createdOn: { type: Date, default: Date.now }
 
 });
 

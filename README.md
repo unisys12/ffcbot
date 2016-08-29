@@ -12,15 +12,9 @@ Project will utilize the following:
 
 **Backend**
 - NodeJS 
-    - ExpressJS for server, routing API calls
     - Discord.JS for Bot functions
-    - MongoDB for Database Queries and Connections
+    - MySQL for Database Queries and Connections
 
-**Frontend**
-- Angular
-    - Angularjs for angulary type of things
-    - Angular-Route for routing and serving of HTML pages
-    - Angular-Resource for retrieveing JSON responses from Express Server
-    - Angular-Material for layouts and cosmedics of web interface. 
+Project has advanced to a stage where, very quickly, I noticed that having the Bot and Website tied together was a really bad idea. This project is the bot side of the app, which runs on the Discord server. Currently, it's main job is logging chat message and placing certain message details into a database. 
 
 ######These are all very general ideas - call it a scratch-pad if you will. Updates will happen to this README as the project progresses.

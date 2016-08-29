@@ -1,6 +1,5 @@
 const dischord = require('discord.js');
-//const fs = require('fs');
-var config = require('./ffcbot/config.js');
+var config = require('./config.js');
 var utilities = require('./ffcbot/utilities.js');
 var bot = new dischord.Client();
 

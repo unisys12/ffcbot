@@ -3,8 +3,6 @@ var config = require('./config.js');
 var utilities = require('./ffcbot/utilities.js');
 var bot = new dischord.Client();
 
-require('./main.js');
-
 // Authenticate with the server using a TOKEN
 bot.loginWithToken(process.env.BOT_TOKEN || config.BOT_TOKEN, function (token, err) {
     // If Error, display it

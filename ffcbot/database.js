@@ -1,6 +1,6 @@
 //Require Dependencies
 var mysql = require('mysql');
-var config = require('./config.js');
+var config = require('../config.js');
 var dbconnection = process.env.CLEARDB_DATABASE_URL;
  
 

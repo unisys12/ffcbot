@@ -4,7 +4,7 @@
   "description": "Discord Management Bot Project for Focused Fire Chat",
   "main": "server.js",
   "scripts": {
-    "test": "N/A"
+    "start": "bot.js"
   },
   "repository": {
     "type": "git",

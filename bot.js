@@ -1,5 +1,10 @@
 const dischord = require('discord.js');
-var config = require('./config.js');
+
+if (!process.env.BOT_TOKEN) {
+    console.log('Working locally, so... loading local config');
+    var config = require('./config.js');
+}
+
 var utilities = require('./ffcbot/utilities.js');
 var bot = new dischord.Client();
 

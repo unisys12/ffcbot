@@ -1,6 +1,9 @@
 //Require Dependencies
 var mysql = require('mysql');
-var config = require('../config.js');
+if (!process.env.BOT_TOKEN) {
+    console.log('Working locally, so... loading local config');
+    var config = require('../config.js');
+}
 var dbconnection = process.env.CLEARDB_DATABASE_URL;
  
 

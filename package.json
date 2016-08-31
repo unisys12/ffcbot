@@ -3,6 +3,9 @@
   "version": "0.0.2",
   "description": "Discord Management Bot Project for Focused Fire Chat",
   "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/unisys12/ffcbot.git"

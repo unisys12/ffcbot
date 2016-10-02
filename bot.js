@@ -1,15 +1,14 @@
 const dischord = require('discord.js');
 
 if (!process.env.BOT_TOKEN) {
-    console.log('Working locally, so... loading local config');
-    var config = require('./config.js');
+    require('dotenv').config();
 }
 
 var utilities = require('./ffcbot/utilities.js');
 var bot = new dischord.Client();
 
 // Authenticate with the server using a TOKEN
-bot.loginWithToken(process.env.BOT_TOKEN || config.BOT_TOKEN, function (token, err) {
+bot.loginWithToken("Bot "+process.env.BOT_TOKEN, function (token, err) {
     // If Error, display it
     if(err){
         console.log(err);
@@ -19,19 +18,27 @@ bot.loginWithToken(process.env.BOT_TOKEN || config.BOT_TOKEN, function (token, e
         this.on('message', function(message){
             // look at the content of the message
             var input = message.content;
+            
             // check for the cmd at the beginning of the message content
             var logCmd = input.startsWith('!logs');
-            // if found, send a message to the author that gave the cmd
-            if (logCmd) { 
-                bot.sendMessage(message.author, "To download the latest Message Logs, http://ffcbot.herokuapp.com/logs/download");
-            }
+            
+            if (logCmd) {
+                var findByChannelAndDate = input.indexOf("-roomByDate");
+
+                if (findByChannelAndDate > 0) {
+                    var result = utilities.queryLogs(input);
+                    bot.sendMessage(message.author, "http://ffcbot.herokuapp.com/logs/download/roomBydate/" + result.columns[0] + "/" + result.queries[0] + "/" + result.columns[1] + "/" + result.queries[1] + "/" + result.queries[2]);
+                }else{
+                    bot.sendMessage(message.author, "To download the latest Message Logs, http://ffcbot.herokuapp.com/logs/download");
+                }
+            }         
 
             //Chat Logging
             if (!message.channel.name) {
                 return;
             } else {
                 utilities.logMessage(message);
-            }        
+            }     
         });
     });
    

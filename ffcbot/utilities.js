@@ -3,10 +3,7 @@
 const fs = require('fs');
 var db = require('./database.js');
 
-//var ObjectID = require('mongodb').ObjectID;
-//var url = 'mongodb://localhost:27017/chat_log';
 var chatlog = './storage/app/public/messagelog.log';
-//var chatarchive = require('../storage/app/public/chatarchive.json');
 var archivepath = './storage/app/public/chatarchive.json';
 
 module.exports = {
@@ -28,44 +25,37 @@ module.exports = {
         
     },
 
+    queryLogs: function(input) {
+        var splitString = input.split(' ');
+        var columns = [];
+        var query = [];
+        var results = {};
 
-    /*logMesseage: function(data) {
+        for(var i=0; i<splitString.length; i++) {
 
-        console.log('Fired Save Event!');
-
-        var logMessage = function(db, callback) {
-            if (data instanceof Object) {
-                
-                console.log('Data is an object, trying to insert...')
-                db.collection('chatlog').insertOne(
-                    {
-                        "_id": data.id,
-                        "server": data.server.name,
-                        "channel": data.channel.name,
-                        "author": data.author.username,
-                        "author_id": data.author.id,
-                        "message": data.cleanContent,
-                        "mentions": data.mentions
-                    }, function (err, result) {
-                    assert.equal(err, null);
-                    console.log('Insert performed and closing connection...')
-                    callback();
-                });
+            // Find column names
+            if(splitString[i] == "-channel") {
+            columns.push(splitString[i].replace("-",""));
+            query.push(splitString[++i]);
             }
-        };
+            if(splitString[i] == "-dates") {
+            columns.push(splitString[i].replace("-",""));
+            query.push(splitString[++i]);
+            query.push(splitString[++i]);
+            }
+            if(splitString[i] == "-user") {
+            columns.push(splitString[i].replace("-",""));
+            query.push(splitString[++i]);
+            }  
 
-        mongo.connect(url, function(err, db) {
-            assert.equal(null, err);
-            console.log('Connected to server...');
-            logMessage(db, function(err) {
-                console.log('Calling logMessage function...')
-                db.close()
-                console.log('Connection closed...')
-            })
+        }
 
-        });
-        
-    },*/
+        results.columns = columns;
+        results.queries = query;
+
+        return results;
+    },
+
     logChat: function (data) {
 
         var d = new Date(data.timestamp);

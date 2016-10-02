@@ -1,6 +1,6 @@
 {
   "name": "ffcbot",
-  "version": "0.0.2",
+  "version": "0.0.8",
   "description": "Discord Management Bot Project for Focused Fire Chat",
   "main": "bot.js",
   "scripts": {
@@ -24,5 +24,8 @@
   "dependencies": {
     "discord.js": "^8.1.0",
     "mysql": "^2.11.1"
+  },
+  "devDependencies": {
+    "dotenv": "^2.0.0"
   }
 }
